@@ -1,2 +1,11 @@
   - name: Ansible ping module
     ansible.builtin.ping:
+
+  - name: Update APT cache
+    ansible.builtin.apt:
+      cache_valid_time: 86400 
+  - name: Authorize my ssh public key
+    ansible.posix.authorized_key:
+      user: sergei
+      state: present
+      key: " ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCoUArsmicy8QYMAksWWKeoqg28hJWp/71+5VsQHkvXWIHYZoARCeUkbCzNUJsbWhHM1RxA+cnqtUTlUWHe35TCxi0RqizXA6REprbQ1o/cvLD6N4+lyCgnJvxbaKmihnh9FOtTKc+9/kJY4mHCOMPjZVFXn/ZqCO4KMpnwzegYH6YYMiGLLI0/k1WcJHi0v298MBnHfg6Tdp5/5DUjjF41UAm3RWHsnUDXaLaasvoM20XRjw+hpSqSHaWtvlDEWtMECOfOzPKWTn+w8C95760oqWEHH0GAQx5QUWzpdQE6Vm+FQRR5opnYh3mFMbLSn84v6nUqepoMosQNnRkO9jRulEZBXjGOon+GiWqLemOnYR8JePNabR95Ov48qF7mjLo1IBlNiVuroKzBw912DEcM/ZqV0DQFcSY2yu30QQz/DZ1IT2jYwo0fr6RjKarfV8XQbblxeJfwlD1VYJ2qA49noqrDoAPcih+FFHMx8I8EmB2wQa8DpZjIgnk3qZi8ASM= sergei@DESKTOP-72AF9I3"

@@ -1,1 +1,4 @@
-FIXME ansible_host=193.40.157.25 ansible_port=FIXME ansible_user=ubuntu
+ubuntu ansible_host=192.168.1.110 ansible_port=22 ansible_user=sergei
+
+[web_servers]
+ubuntu

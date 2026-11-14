@@ -1,5 +1,12 @@
 ---
   - name: Initial setup
     hosts: all
+    become: true
     roles:
       - init
+
+  - name: Web servers
+    hosts: web_servers
+    become: true
+    roles:
+      - nginx
